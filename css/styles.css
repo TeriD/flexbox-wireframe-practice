@@ -71,7 +71,7 @@ article {
     border-radius: 10px;
 }
 
-/* ⬇️ MEDIA QUERY FOR DESKTOP LAYOUT */
+/* Media Query for Desktop Layout */
 @media (min-width: 768px) {
     .content {
         flex-direction: row;
