@@ -38,6 +38,8 @@ footer {
 
 .content {
     display: flex;
+    flex-direction: column;
+    /* MOBILE FIRST: stack articles and aside */
     gap: 1rem;
     background-color: #66bb6a;
     padding: 1rem;
@@ -59,7 +61,6 @@ aside {
     flex-direction: column;
     gap: 1rem;
     flex: 2;
-    /* 2/3 of the space */
 }
 
 article {
@@ -68,4 +69,22 @@ article {
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
+}
+
+/* ⬇️ MEDIA QUERY FOR DESKTOP LAYOUT */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        /* Switch to side-by-side */
+    }
+
+    .articles {
+        flex: 2;
+        /* Take up 2/3 */
+    }
+
+    aside {
+        flex: 1;
+        /* Take up 1/3 */
+    }
 }
